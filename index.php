@@ -27,7 +27,6 @@ $metadata = $_POST['metada'];
 
 
 
-
 $data = [
                 'name' => $fullname,
                 'mobile_number' => $mobile_number,
@@ -35,7 +34,7 @@ $data = [
                 'type' => $type,
                 'used_as' => $used_as,
                 'create_vpa' => $create_vpa,
-	'metadata' => $metadata;
+	'metadata' => $metadata,
                 'kyc' => [
                 'state_code' => $state_code,
                 'business_category' => $business_category,
