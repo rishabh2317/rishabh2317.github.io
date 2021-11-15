@@ -23,7 +23,7 @@ $postal_code = 683101;
 $business_category = 'agri_business';
 $business_type = 'individual';
 $pan = 'EQKPM7093F';
-$metadata = $_POST['metada'];
+$metadata = $_POST['metadata'];
 
 
 
