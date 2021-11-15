@@ -23,6 +23,8 @@ $postal_code = 683101;
 $business_category = 'agri_business';
 $business_type = 'individual';
 $pan = 'EQKPM7093F';
+$metadata = $_POST['metada'];
+
 
 
 
@@ -33,6 +35,7 @@ $data = [
                 'type' => $type,
                 'used_as' => $used_as,
                 'create_vpa' => $create_vpa,
+	'metadata' => $metadata;
                 'kyc' => [
                 'state_code' => $state_code,
                 'business_category' => $business_category,
