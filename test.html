@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    font-family: sans-serif;
+  }
+
+  input[type=text],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    box-sizing: border-box;
+    min-height: 40px;
+    min-width: 115px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 35px;
+    border: none;
+    cursor: pointer;
+    background: #4236ff 0 0 no-repeat padding-box;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+    color: #fff;
+    margin: auto;
+    display: inherit;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+
+  form {
+    max-width: 900px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  div {
+    border-radius: 5px;
+    background-color: #000000;
+    padding: 20px;
+  }
+
+  h3 {
+    color: #c7c7c7
+  }
+
+  label {
+    color: #c7c7c7
+  }
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ZWITCH ACCOUNTS</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+<script src="<?php echo $remote_script; ?>"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+</head>
+
+<body>
+
+  <div style="width: 600px;margin: auto;">
+    <h3>
+      <center>
+
+        <img src="bajaj.png" style="    right: 28%;
+    width: 20%;
+    position: relative;">
+
+        <img src="logo.svg" height="60" alt="ZWITCH" style="width: 22%;  position: relative; left: 29%;" /> </br> <span
+        style="margin-top: 18px; display: inline-block"> Virtual Account Demo </span> </center>
+    </h3>
+
+    <form action="index.php" method="post">
+
+      <div class="form-group">
+        <label for="fullname">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+      </div>
+
+
+      <div class="form-group">
+        <label for="phone">Mobile Number</label>
+        <input type="text" class="form-control" id="mobile_number" name="mobile_number" placeholder="Mobile number"
+          required maxlength="10">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" class="form-control" id="email" name="email" placeholder="Email" required>
+      </div>
+
+<!-- 
+      <div class="form-group">
+        <label for="atype">Type</label>
+        <select class="form-control" id="type" name="type">
+          <option value="virtual">Virtual</option>
+          <!-- <option value="link_current_account">Link Current Account!</option>
+          <option value="savings">Savings</option> -->
+        </select>
+      </div> -->
+
+
+<!--       <div class="form-group">
+        <label for="used_as">Used As</label>
+        <select class="form-control" id="used_as" name="used_as">
+          <option value="wallet">Wallet</option>
+          <option value="collection_tool">Collection Tool </option>
+          <!-- <option value="verification">Verification</option> -->
+        </select>
+      </div> -->
+
+
+
+      <!-- <div class="form-group">
+    <label for="create_vpa">Create VPA</label>
+    <select class="form-control" id="create_vpa"  name="create_vpa">
+            <option value="false">False </option>
+            <option value="true">True</option>
+    </select>
+    </div> -->
+
+      <!-- <div class="form-group" id="kyc"> -->
+      <!-- <div class="row">
+        <h3>KYC details</h3> -->
+      <!-- <div class="col-6">
+          <label for="state_code">State code</label>
+            <select class="form-control" id="state_code"  name="state code">
+            <option></option>
+            <option value="KL">KL</option>
+            <option value="KA">KA </option>
+          </select>
+        </div>
+        <div class="col-6">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" name="city" placeholder="city">
+        </div>
+         <div class="col-6">
+            <label for="postal_code">Postal code</label>
+            <input type="text" class="form-control" id="postal_code" name="postal_code" placeholder="postal code" maxlength="6">
+        </div> -->
+      <!-- <div class="col-6">
+          <label for="business_category">Business category</label>
+            <select class="form-control" id="business_category"  name="business_category">
+            <option></option>
+            <option value="agri_business">Agri business</option>
+            <option value="banking_or_financial_services">Banking/Financial</option>
+            <option value="healthcare_firm">HealthCare</option>
+          </select>
+        </div> -->
+      <!-- <div class="col-6">
+          <label for="business_type">Business type</label>
+            <select class="form-control" id="business_type"  name="business_type">
+            <option></option>
+            <option value="individual">Individual</option>
+            <option value="partnership">Partnership</option>
+            <option value="others">Others</option>
+          </select>
+        </div> -->
+      <!-- <div class="col-6">
+            <label for="pan">PAN</label>
+            <input type="text" class="form-control" id="pan" name="pan" placeholder="pan"  maxlength="10">
+        </div> -->
+      <!-- </div> -->
+      <!-- </div> -->
+
+
+
+      <input type="submit" value="Generate Virtual Account Number and VPA">
+    </form>
+  </div>
+
+</body>
+
+</html>
+
+<!-- <script type="text/javascript">
+  
+
+  $("#create_vpa").change(function() {
+  if ($(this).val() == "true") {
+    $('#kyc').show();
+    $('#akyc').attr('required', '');
+    $('#akyc').attr('data-error', 'This field is required.');
+  } else {
+    $('#kyc').hide();
+    $('#akyc').removeAttr('required');
+    $('#akyc').removeAttr('data-error');
+  }
+});
+$("#create_vpa").trigger("change");
+
+</script> -->
