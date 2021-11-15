@@ -37,7 +37,8 @@ Class Api{
             'type' 			=> (!empty($data['type']))? $data['type'] : NULL,
             'used_as' 	=> (!empty($data['used_as']))?  $data['used_as'] : NULL,
             'create_vpa' 	=> (!empty($data['create_vpa']))?  $data['create_vpa'] : NULL,
-		    'metadata' =>   (!empty($data['metedata']))?  $data['metedata'] : NULL,
+		   'metadata' =>  (object)array(
+            (!empty($data['metadata']['metadata']))?  $data['metadata']['metadata'] : NULL,),
             'kyc'   => (object)array(
             'business_type' =>  (!empty($data['kyc']['business_type']))?  $data['kyc']['business_type'] : NULL,
             'state_code' =>  (!empty($data['kyc']['state_code']))?  $data['kyc']['state_code'] : NULL,
@@ -56,6 +57,8 @@ Class Api{
             'email'                 => (!empty($data['email']))? $data['email'] : NULL,
             'type'          => (!empty($data['type']))? $data['type'] : NULL,
             'used_as'   => (!empty($data['used_as']))?  $data['used_as'] : NULL,
+		'metadata' =>  (object)array(
+            (!empty($data['metadata']['metadata']))?  $data['metadata']['metadata'] : NULL,),		    
             'kyc'   => (object)array(
                 'business_category' =>  (!empty($data['kyc']['business_category']))?  $data['kyc']['business_category'] : NULL,
             ),  
